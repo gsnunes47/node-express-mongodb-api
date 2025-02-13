@@ -2,7 +2,7 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv").config();
+require("dotenv").config();
 
 const app = express();
 app.use(express.json());
@@ -56,7 +56,7 @@ app.put("/:id", async (req, res) => {
 
   //   const updateFilm = await Film.findById((id = req.params.id));
 
-  return res.send(updateFilm);
+  return res.send(film);
 });
 
 //delete
